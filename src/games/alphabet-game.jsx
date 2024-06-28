@@ -1,13 +1,15 @@
 import {useState} from "react";
 import {LineBreak} from "@/line-break.jsx";
+import {LocalStorage} from "@/local-storage.js";
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+const storage = new LocalStorage("alphabet-game");
 
 export function AlphabetGame(props) {
-  const [letter, setLetter] = useState(parseInt(localStorage.getItem("alphabet.current") || 0));
+  const [letter, setLetter] = useState(storage.get() || 0);
   const updateLetter = (num) => {
-    localStorage.setItem("alphabet.current", num);
+    storage.set(num);
     setLetter(num);
   }
   

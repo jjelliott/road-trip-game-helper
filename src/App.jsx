@@ -4,7 +4,7 @@ import {Game, gameLabel} from "@/games/game.js";
 import {AlphabetGame} from "@/games/alphabet-game.jsx"
 import {Switch, Case} from "@/switch.jsx";
 import {NumberGame} from "@/games/number-game.jsx";
-import {StatePlateGame} from "@/games/state-plates.jsx";
+import {StatePlateGame} from "@/games/state-plates/state-plates.jsx";
 
 
 function App() {
