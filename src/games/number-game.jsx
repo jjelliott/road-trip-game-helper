@@ -1,13 +1,14 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {LineBreak} from "@/line-break.jsx";
-import {LocalStorage} from "@/local-storage.js";
-
-const storage = new LocalStorage("number-game")
+// import {Game} from "@/games/game.js";
 
 export function NumberGame() {
-  const [number, setNumber] = useState(storage.get() || 0);
+  const [number, setNumber] = useState( 0);
+  useEffect(() => {
+    // setNumber(getGameState(Game.NUMBER));
+  }, []);
   const updateNumber = (num) => {
-    storage.set(num);
+    // setGameState(Game.NUMBER);
     setNumber(num);
   }
   return <>
