@@ -14,7 +14,7 @@ function App() {
     <>
       <h1>Road Trip Game Helper</h1>
       <select onChange={e => setGame(e.target.value)}>
-        {Object.keys(Game).map(it => <option value={Game[it]}>{gameLabel(it)}</option>)}
+        {Object.keys(Game).map(it => <option key={it} value={Game[it]}>{gameLabel(it)}</option>)}
       </select>
       <Switch test={game}>
         <Case value={Game.ALPHABET}><AlphabetGame></AlphabetGame></Case>
